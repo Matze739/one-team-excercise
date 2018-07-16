@@ -49,6 +49,11 @@ $ cd one-team-excercise
 $ npm install
 $ npm run serve
 ```
+### Branching model
+
+as a simple and easy working branching model we would like to start with, the branching model from Vincent Driessen. For detailed information and description please check (https://nvie.com/posts/a-successful-git-branching-model/?)
+
+
 ### Plugins
 
 Here should be a list of all plugins which we are using.
