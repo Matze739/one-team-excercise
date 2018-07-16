@@ -1,0 +1,207 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @include rem(font-size, 16px);
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// HEADLINES
+
+h1 {
+  @include rem(font-size, 22px);
+  @include rem(line-height, 44px);
+}
+
+h2 {
+  @include rem(font-size, 20px);
+  font-weight: normal;
+}
+
+h3 {
+  @include rem(font-size, 16px);
+  font-weight: normal;
+}
+
+h4 {
+  @include rem(font-size, 14px);
+  font-weight: 500;
+}
+
+h5 {
+  @include rem(font-size, 14px);
+  font-weight: normal;
+}
+
+h6 {
+  @include rem(font-size, 14px);
+  font-weight: normal;
+}
+
+// PARAGRAPHS
+
+p {
+  @include rem(font-size, 16px);
+  @include rem(margin, (10px, 0));
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+// BLOCKQUOTES
+
+blockquote {
+  @include rem(font-size, 20px);
+  font-weight: normal;
+  line-height: 1.4;
+
+  p {
+    @extend blockquote;
+  }
+
+  cite {
+    @include rem(font-size, 20px);
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+
+    a {
+      @include rem(font-size, 16px);
+      font-weight: 500;
+      color: $lh-color;
+      text-decoration: none;
+      font-style: normal;
+    }
+  }
+}
+
+// LISTS
+
+dt {
+  @include rem(font-size, 14px);
+  @include rem(padding, (12px, 0));
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+dd {
+  margin-left: 0;
+}
+
+li,
+dd {
+  @include rem(font-size, 16px);
+  font-weight: normal;
+  line-height: 3;
+}
+
+li:not(:last-child),
+dd:not(:last-child) {
+  border-bottom: 1px solid $lh-divider;
+}
+
+ul {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+// TABLES
+
+table {
+  text-align: center;
+  border-spacing: 0;
+}
+
+th,
+td {
+  @include rem(min-width, 200px);
+}
+
+th {
+  @include rem(font-size, 14px);
+  @include rem(padding, (11px, 5px, 12px, 5px));
+
+  border-bottom: 1px solid $lh-divider;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+td {
+  @include rem(font-size, 16px);
+  @include rem(padding, (14px, 5px, 15px, 5px));
+}
+
+tr:nth-child(2n) {
+  background-color: rgba($lh-background-color, 0.5);
+}
+
+// INLINE ELEMENTS
+
+a {
+  color: $lh-color;
+
+  &:hover,
+  &:active, {
+    color: $lh-color;
+  }
+}
+
+strong {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
+}
+
+b {
+  color: $lh-color;
+  font-weight: 500;
+}
+
+i {
+  font-style: italic;
+}
+
+u {
+  text-decoration: underline;
+}
+
+del,
+ins {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+sup {
+  @include rem(font-size, 16px);
+  @include rem(top, -2px);
+}
+
+sub {
+  @include rem(font-size, 12px);
+  @include rem(bottom, -5px);
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border:none;
+  border-radius: 0;
+  font-size: 1em;
+  width: 100%
+} 

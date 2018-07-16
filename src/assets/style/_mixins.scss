@@ -1,0 +1,52 @@
+/* We define a list of values for both units */
+/**
+* The mixin relies on a baseline of 10px, setted as html fontsize : 62,5%
+**/
+@function parseint($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+/**
+* A shorter version to get the values of the font size map
+**/
+@function font-size($key) {
+  @return map-get($pui-font-sizes, $key);
+}
+
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+
+  /* We iterate through each value in the given parameter $values */
+  @each $value in $values {
+    /* If the value is either auto or 0, we append it to the list as-is */
+    @if $value == 0 or $value == auto {
+      $px : append($px, $value);
+      $rem: append($rem, $value);
+    }
+
+    /* If the value has a unit, we split it to get both the unit and the raw value */
+    @else {
+      $unit: unit($value);
+      $val: parseint($value);
+
+      /* We append according values to the lists depending on the unit of the given value */
+      @if $unit == "px" {
+        $px : append($px, $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+      @if $unit == "rem" {
+        $px: append($px, ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  /* If the two lists are the same, we output only one (like margin-top: 0) */
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}

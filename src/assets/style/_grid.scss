@@ -1,0 +1,118 @@
+$global-breakpoints: (
+  s: 'screen and (min-width : 320px)',
+  m:  'screen and (min-width: 768px)',
+  l:  'screen and (min-width: 1024px)',
+  xl:  'screen and (min-width: 1280px)'
+);
+
+$grid-columns: 12;
+$grid-gutter-width: 2rem;
+$grid-outer-margin: 2rem;
+$grid-max-width: 1280px;
+$grid-breakpoints: $global-breakpoints;
+
+// helper
+$grid-half-gutter-width: $grid-gutter-width * 0.5;
+$grid-compensation: $grid-half-gutter-width * -1;
+
+@mixin grid-container () {
+  box-sizing: border-box;
+  max-width: $grid-max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $grid-outer-margin;
+  padding-left: $grid-outer-margin;
+}
+
+@mixin grid-row () {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $grid-compensation;
+  margin-left: $grid-compensation;
+}
+
+@mixin grid-row-modifier ($name: '') {
+
+  $breakpointSuffix: '';
+
+  @if $name != '' {
+    $breakpointSuffix: \@#{$name};
+  }
+
+  &--start#{$breakpointSuffix} {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  &--center#{$breakpointSuffix} {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &--end#{$breakpointSuffix} {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  &--top#{$breakpointSuffix} {
+    align-items: flex-start;
+  }
+
+  &--middle#{$breakpointSuffix} {
+    align-items: center;
+  }
+
+  &--bottom#{$breakpointSuffix} {
+    align-items: flex-end;
+  }
+
+  &--around#{$breakpointSuffix} {
+    justify-content: space-around;
+  }
+
+  &--between#{$breakpointSuffix} {
+    justify-content: space-between;
+  }
+
+  &--reverse#{$breakpointSuffix} {
+    flex-direction: row-reverse;
+  }
+}
+
+@mixin grid-column ($columns: $grid-columns) {
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-right: $grid-half-gutter-width;
+  padding-left: $grid-half-gutter-width;
+  flex-basis: 100% / $grid-columns * $columns;
+  max-width: 100% / $grid-columns * $columns;
+}
+
+@mixin grid-column-offset ($columns: 1) {
+  @if $columns == 0 {
+    margin-left: 0;
+  } @else {
+    margin-left: 100% / $grid-columns * $columns;
+  }
+}
+
+@mixin grid-column-modifier ($name: '') {
+
+  $breakpointSuffix: '';
+
+  @if $name != '' {
+    $breakpointSuffix: \@#{$name};
+  }
+
+  &--first#{$breakpointSuffix} {
+    order: -1;
+  }
+
+  &--last#{$breakpointSuffix} {
+    order: 1;
+  }
+}

@@ -2,6 +2,10 @@
   "name": "one-team-excercise",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Matze739/one-team-excercise"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,6 +13,8 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "css-loader": "^1.0.0",
+    "postcss-import": "^11.1.0",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
@@ -24,6 +30,8 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.0.1",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
     "vue-template-compiler": "^2.5.16"
   },
   "browserslist": [
