@@ -7,9 +7,27 @@
 
 .root-icon {
   background: url('~@/assets/icons/lh-root-icons.png');
-  background-size: 194px 160px;
+  background-size: 262px 232px;
   overflow: hidden;
   display: inline-block;
+}
+
+.icon-nav-account {
+  width: 24px;
+  height: 24px;
+  background-position: -214px -72px;
+}
+
+.icon-nav-search {
+  width: 24px;
+  height: 24px;
+  background-position: -214px -120px;
+}
+
+.icon-nav-service {
+  width: 24px;
+  height: 24px;
+  background-position: -214px -96px;
 }
 
 .icon-menu-checkin {

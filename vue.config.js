@@ -25,6 +25,17 @@ module.exports = {
     }
   },
 
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "@/assets/style/_colors.scss";
+          @import "@/assets/style/_mixins.scss";
+        `
+      }
+    }
+  },
+
   lintOnSave: true,
   baseUrl: undefined,
   outputDir: undefined,
