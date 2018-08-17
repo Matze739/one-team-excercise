@@ -1,8 +1,6 @@
-@import "./_colors";
-@import "./_mixins";
-@import "./_grid";
-@import "./_normalize";
-@import "./_sprite";
+@import "_grid";
+@import "_normalize";
+@import "_sprite";
 
 #app {
   background-color: $lh-background-color;
