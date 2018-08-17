@@ -7,6 +7,7 @@ html {
 
 body {
   @include rem(font-size, 16px);
+  font-family: "Helvetica Neue", Helvetica, "Roboto", "Segoe WP", Arial,sans-serif; 
   margin: 0;
   padding: 0;
 }
@@ -20,33 +21,29 @@ body {
 // HEADLINES
 
 h1 {
-  @include rem(font-size, 22px);
-  @include rem(line-height, 44px);
+  @include rem(font-size, 24px);
+  @include rem(line-height, 24px);
+  @include rem(padding, 30px 0 20px);
+  font-weight: normal;
 }
 
 h2 {
-  @include rem(font-size, 20px);
+  @include rem(font-size, 18px);
+  @include rem(line-height, 22px);
+  @include rem(padding, 28px 0 16px);
   font-weight: normal;
 }
 
 h3 {
-  @include rem(font-size, 16px);
+  @include rem(font-size, 18px);
+  @include rem(line-height, 22px);
   font-weight: normal;
 }
 
 h4 {
-  @include rem(font-size, 14px);
-  font-weight: 500;
-}
-
-h5 {
-  @include rem(font-size, 14px);
-  font-weight: normal;
-}
-
-h6 {
-  @include rem(font-size, 14px);
-  font-weight: normal;
+  @include rem(font-size, 18px);
+  @include rem(line-height, 22px);
+  font-weight: 400;
 }
 
 // PARAGRAPHS
