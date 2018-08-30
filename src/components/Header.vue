@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <a href="/"><img src="../assets/png/lh_logo.png"/></a>
+    <a href="/"><img src="../assets/png/ote_logo.png"/></a>
     <nav class="header__nav">
       <a class="root-icon icon-nav-account" href="#"></a>
       <a class="root-icon icon-nav-search" href="#"></a>
@@ -22,7 +22,7 @@ export default {
 .header {
   display: block;
   height: 3em;
-  background-color: $lh-header-footer-background-color;
+  background-color: $ote-header-footer-background-color;
 
   img {
     width: 10em;
