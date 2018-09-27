@@ -73,11 +73,17 @@ export default {
   @include rem(font-size, 14px);
   border-bottom: 2px solid $ote-divider;
 
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
   &__item {
     margin-left: 5px;
     display: inline-flex;
 
-    &:before {
+    &:after {
       content: '|';
       display: inline-flex;
       position: relative;
@@ -87,11 +93,11 @@ export default {
       color: $ote-color;
     }
 
-    /*&:first-child {
-      &:before {
+    &:last-child {
+      &:after {
         display: none;
       }
-    }*/
+    }
 
     .anchor-link {
       display: inline;
@@ -100,7 +106,7 @@ export default {
       overflow: hidden;
       text-decoration: none;
       font-weight: bold;
-      @include rem(padding, 10px);
+      @include rem(padding, 6px 10px);
       @include rem(min-height, auto);
       span {
         @include rem(margin-right, 7px);
