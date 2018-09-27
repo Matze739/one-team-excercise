@@ -37,7 +37,7 @@ export default {
   @include rem(padding, 12px);
 
   &__link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-weight: bold;
     text-decoration: none;
