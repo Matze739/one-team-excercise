@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <a href="/"><img src="../assets/svg/logo_falcon.svg"/></a>
+    <a href="/"><img src="../assets/png/ote_logo.png"/></a>
     <nav class="header__nav">
       <a class="root-icon icon-nav-account" href="#"></a>
       <a class="root-icon icon-nav-search" href="#"></a>
@@ -30,7 +30,6 @@ export default {
     display: block;
     float: left;
     max-width: 10em;
-    margin-left: 0.5em;
   }
   &__nav {
     display: flex;
