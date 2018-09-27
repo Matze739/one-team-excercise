@@ -17,7 +17,6 @@ export default {
   name: 'home',
   components: {
     Header,
-    social-media-links
     SocialMediaLinkList,
     FooterLinks,
     BrandIdentifier
