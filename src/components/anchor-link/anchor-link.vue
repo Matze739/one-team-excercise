@@ -2,6 +2,7 @@
   <a
     class="anchor-link"
     :href="linkTarget"
+    :target="linkTargetLocation"
     :style="{
       'background-color': backgroundColor,
       'color': textColor,
@@ -49,6 +50,11 @@ export default {
       type: String,
       required: false,
       default: null
+    },
+    linkTargetLocation: {
+      type: String,
+      required: false,
+      default: '_self'
     }
   },
   computed: {
