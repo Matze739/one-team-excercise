@@ -1,6 +1,6 @@
 ### Description
 
-The social-media-link component allows you to add social media links.
+The link-collection component allows you to add links as a link-collection.
 
 Mandatory properties are
   - linkTarget | The URL, where the link should go
